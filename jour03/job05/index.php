@@ -2,45 +2,48 @@
 
 	$str = "On nest pas le meilleur quand on le croit mais quand on le sait";
 
-	$dic = ["consonnes" => ["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","z"],
-			"voyelles" => ["a","e","i","o","O","u","y"]];
+
+
+	$dic = array('consonnes' =>["b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","z"],'voyelles' => ["a","e","i","o","O","u","y"]);
 	
 	$i = 0 ;
 	$consonnes = 0 ;
 	$voyelles = 0;
-	
 
-	while ($i <= strlen($str)) 
+
+
+	while ($i <= 62) 
 	{
 		$c = 0;
-		$tc = count($dic["consonnes"]);
+		
 		$v = 0 ;
-		$tv = count($dic["voyelles"]);
+		
 
-		while ($c < $tc) 
+		while ($c <= 19) 
 		{
-			if ($str[$i] == ($dic["consonnes"][$c]))
+			if ($str[$i] == ($dic['consonnes'][$c]))
 			{
+
 				$consonnes++ ;
-				break ;
+				
+				
 			}
 			$c++ ;
 		}
 
-
-
-
-		while ($v < $tv) 
+		while ($v <= 6) 
 		{
-			if ($str[$i] == ($dic["voyelles"][$v])) 
+			if ($str[$i] == ($dic['voyelles'][$v])) 
 			{
 				$voyelles++ ;
-				break ;
+				
 			}
 			$v++ ;
 		}
 		$i++ ;
 	}
+
+	echo "Il y a"." ".$consonnes." "."consonnes "."et ".$voyelles." voyelles";
 
 
 ?>
